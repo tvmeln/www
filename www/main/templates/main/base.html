@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        *{padding:0; margin:0;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;}
+        .header {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            background-color: rgb(97, 69, 222);
+            border-bottom: 1.5px solid;
+        }
+        a {text-decoration:none; color: black}
+        .item {
+            padding: 15px;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+        .item:hover {
+            background-color: rgb(199, 187, 252);
+            border-radius: 10px;
+            transition: background-color 1s;
+        }
+
+    </style>
+    {%block tittle%}
+    {% endblock %}
+</head>
+<body>
+<header>
+    <div class="header">
+        <div class="item">
+            <a href="{% url 'main'%}">Главная</a>
+        </div>
+        <div class="item">
+            <a href="{% url contati%}">Контакты</a>
+        </div>
+        <div class="item">
+            <a href="{% url about%}">О нас</a>
+        </div>
+        <div class="item">
+            <a href="{% url login %}">Вход</a>
+        </div>
+    </div>
+</header>
+    {% block body %}
+    {% endblock %}
+</body>
+</html>
