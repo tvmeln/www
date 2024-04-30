@@ -1,5 +1,21 @@
 {% extends "base.html" %}
-{% block tittle %}
+{% block title %}
+    Главная
+{% endblock %}
+{% block style %}
+    .content {
+        background-color: rgb(0, 0, 0);
+        animation-name: contentcolor;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes contentcolor {
+        20% {background-color: #c69fc7}
+        40% {background-color: #264a47}
+        60% {background-color: #ccb716}
+        80% {background-color: #102538}
+    }
 {% endblock %}
 {% block body %}
+    <h1><a href="https://itproger.com/intensive/python#9">Это главная</a></h1>
 {% endblock %}
