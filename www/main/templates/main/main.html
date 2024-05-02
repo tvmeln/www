@@ -15,7 +15,29 @@
         60% {background-color: #ccb716}
         80% {background-color: #102538}
     }
+    .main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 0 20% 0 20%;
+    }
+    .main-item {
+        padding: 1%;
+        border: 1px solid black;
+        border-radius: 20px;
+        margin: 5%;
+        width: 200px;
+        height:300px;
+        background-color: rgb(250, 250, 250);
+        align-items: center;
+
+    }
 {% endblock %}
-{% block body %}
-    <h1><a href="https://itproger.com/intensive/python#9">Это главная</a></h1>
+{% block content %}
+<div class="main">
+    {% for i in y %}
+        <div class="main-item">
+            <p>text</p>
+        </div>
+    {% endfor %}
+</div>
 {% endblock %}
